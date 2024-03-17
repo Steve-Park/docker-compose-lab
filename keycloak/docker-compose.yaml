@@ -15,7 +15,9 @@ services:
   keycloak:
     container_name: keycloak
     image: quay.io/keycloak/keycloak
+    # command: "start-dev --log-level=ALL"
     command: "start-dev"
+    # command: "start --optimized"
     restart: unless-stopped
     networks:
       - keycloak-net
